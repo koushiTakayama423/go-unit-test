@@ -1,7 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"github.com/koushiTakayama423/go-unit-test/cmd"
+)
 
 func main() {
-	fmt.Println("Hello World!!")
+	csv, err := cmd.Input_csv("input/input.csv")
+	if err != nil {
+		panic("")
+	}
+
+	cmd.Output_csv(csv)
 }
